@@ -103,6 +103,7 @@ class Sender(object):
             logger.error('Retried for max times, continue')
         # 停止拨号
         (status, output) = subprocess.getstatusoutput(STOP_DIAL_BASH)
+        time.sleep(1)
         if not status == 0:
             logger.error('Stop dial failed')
         # 拨号
