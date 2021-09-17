@@ -101,6 +101,10 @@ class Sender(object):
             self.remove_proxy()
         except RetryError:
             logger.error('Retried for max times, continue')
+        # 停止拨号
+        (status, output) = subprocess.getstatusoutput(STOP_DIAL_BASH)
+        if not status == 0:
+            logger.error('Stop dial failed')
         # 拨号
         (status, output) = subprocess.getstatusoutput(DIAL_BASH)
         if not status == 0:

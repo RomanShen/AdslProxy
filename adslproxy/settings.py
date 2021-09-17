@@ -7,8 +7,10 @@ env = Env()
 DIAL_CYCLE = env.int('DIAL_CYCLE', 20)
 # 拨号出错重试间隔
 DIAL_ERROR_CYCLE = env.int('DIAL_ERROR_CYCLE', 5)
+# 停止拨号命令
+STOP_DIAL_BASH = env.str('STOP_DIAL_BASH', 'pppoe-stop')
 # 拨号命令
-DIAL_BASH = env.str('DIAL_BASH', 'pppoe-stop;pppoe-start')
+DIAL_BASH = env.str('DIAL_BASH', 'pppoe-start')
 # 拨号网卡
 DIAL_IFNAME = env.str('DIAL_IFNAME', 'ppp0')
 
