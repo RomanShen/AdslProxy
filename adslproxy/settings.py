@@ -4,7 +4,7 @@ from environs import Env
 env = Env()
 
 # 拨号间隔，单位秒
-DIAL_CYCLE = env.int('DIAL_CYCLE', 50)
+DIAL_CYCLE = env.int('DIAL_CYCLE', 20)
 # 拨号出错重试间隔
 DIAL_ERROR_CYCLE = env.int('DIAL_ERROR_CYCLE', 5)
 # 停止拨号命令
