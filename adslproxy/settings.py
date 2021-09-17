@@ -37,7 +37,7 @@ TEST_CYCLE = env.int('TEST_CYCLE', 100)
 
 # 服务器端口
 SERVER_PORT = env.int('SERVER_PORT', 8425)
-SERVER_HOST = env.str('SERVER_HOST', '172.28.69.183')
+SERVER_HOST = env.str('SERVER_HOST', '0.0.0.0')
 
 # 代理端口
 PROXY_PORT = env.int('PROXY_PORT', 8888)
