@@ -18,11 +18,11 @@ DIAL_IFNAME = env.str('DIAL_IFNAME', 'ppp0')
 CLIENT_NAME = env.str('CLIENT_NAME', 'adsl1')
 
 # Redis数据库IP
-REDIS_HOST = env.str('REDIS_HOST', '172.28.69.183')
+REDIS_HOST = env.str('REDIS_HOST', '47.101.164.45')
 # Redis数据库密码, 如无则填None
 REDIS_PASSWORD = env.str('REDIS_PASSWORD', None)
 # Redis数据库端口
-REDIS_PORT = env.int('REDIS_PORT', 6379)
+REDIS_PORT = env.int('REDIS_PORT', 6380)
 # 代理池键名
 REDIS_KEY = env.str('REDIS_KEY', 'adsl')
 
@@ -36,7 +36,7 @@ TEST_TIMEOUT = env.int('TEST_TIMEOUT', 20)
 TEST_CYCLE = env.int('TEST_CYCLE', 100)
 
 # 服务器端口
-SERVER_PORT = env.int('SERVER_PORT', 8425)
+SERVER_PORT = env.int('SERVER_PORT', 12345)
 SERVER_HOST = env.str('SERVER_HOST', '0.0.0.0')
 
 # 代理端口
