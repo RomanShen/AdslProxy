@@ -4,11 +4,11 @@ from environs import Env
 env = Env()
 
 # 拨号间隔，单位秒
-DIAL_CYCLE = env.int('DIAL_CYCLE', 100)
+DIAL_CYCLE = env.int('DIAL_CYCLE', 20)
 # 拨号出错重试间隔
 DIAL_ERROR_CYCLE = env.int('DIAL_ERROR_CYCLE', 5)
 # 拨号命令
-DIAL_BASH = env.str('DIAL_BASH', 'adsl-stop;adsl-start')
+DIAL_BASH = env.str('DIAL_BASH', 'pppoe-stop;pppoe-start')
 # 拨号网卡
 DIAL_IFNAME = env.str('DIAL_IFNAME', 'ppp0')
 
@@ -18,7 +18,7 @@ CLIENT_NAME = env.str('CLIENT_NAME', 'adsl1')
 # Redis数据库IP
 REDIS_HOST = env.str('REDIS_HOST', 'localhost')
 # Redis数据库密码, 如无则填None
-REDIS_PASSWORD = env.str('REDIS_PASSWORD', 'foobared')
+REDIS_PASSWORD = env.str('REDIS_PASSWORD', None)
 # Redis数据库端口
 REDIS_PORT = env.int('REDIS_PORT', 6379)
 # 代理池键名
@@ -38,6 +38,6 @@ SERVER_PORT = env.int('SERVER_PORT', 8425)
 SERVER_HOST = env.str('SERVER_HOST', '0.0.0.0')
 
 # 代理端口
-PROXY_PORT = env.int('PROXY_PORT', 3128)
+PROXY_PORT = env.int('PROXY_PORT', 8888)
 PROXY_USERNAME = env.str('PROXY_USERNAME', '')
 PROXY_PASSWORD = env.str('PROXY_PASSWORD', '')
